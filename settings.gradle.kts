@@ -18,6 +18,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+    // The default "libs" version catalog is loaded from gradle/libs.versions.toml.
 }
 
 rootProject.name = "ThunderCrest"

@@ -1,0 +1,15 @@
+# Copy this file to ridge.properties for local QA overrides.
+# ridge.properties is ignored and must not be committed.
+
+# Opens VoltPaneActivity directly in debug builds when non-empty.
+probeLink=
+
+# Overrides AppsFlyer status in debug builds, for example: Non-organic
+forceAfStatus=
+
+# Extra URL-encoded campaign fields injected in debug builds.
+# Example: campaign=qa&af_channel=manual&sub_id_1=test
+forceParams=
+
+# true keeps a backend native verdict for the install; false lets debug builds retest.
+stickyVerdict=true

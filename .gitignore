@@ -27,6 +27,8 @@ local.properties
 *.jks
 *.keystore
 keystore.properties
+ridge.properties
+google-services.json
 **/SIGNING_INFO.txt
 
 # Proguard folder

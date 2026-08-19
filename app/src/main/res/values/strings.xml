@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Thunder Crest</string>
+
+    <string name="notif_channel_name">Thunder Crest</string>
+    <string name="notif_channel_desc">Bonuses, offers and important updates.</string>
+
+    <string name="offline_title">You are offline</string>
+    <string name="offline_message">Check your connection and try again.</string>
+    <string name="offline_retry">Retry</string>
+
+    <string name="loading_title">Loading</string>
+
+    <string name="push_prompt_title">Get exclusive bonuses!</string>
+    <string name="push_prompt_body">Enable notifications to receive promo codes and special offers straight to your device.</string>
+    <string name="push_prompt_yes">Accept</string>
+    <string name="push_prompt_skip">Skip</string>
 </resources>

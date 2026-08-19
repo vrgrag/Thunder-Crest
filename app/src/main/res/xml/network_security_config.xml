@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Permits cleartext (http://) traffic for all domains.
+    Required because push-notification URLs and some partner/redirect
+    pages may use plain HTTP. Without this Android 9+ blocks them with
+    ERR_CLEARTEXT_NOT_PERMITTED, causing a black error screen in the WebView.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

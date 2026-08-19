@@ -60,8 +60,8 @@ object Art {
     val thunderCrystal get() = sprite("Thunder_Crystal")
 
     // Loading + menu backgrounds.
-    val loadingPortrait get() = bg("Vertical_Loading_Screen")
-    val loadingLandscape get() = bg("Horizontal_Loading_Screen")
+    val loadingPortrait get() = bg("Aegis_Portrait_Boot")
+    val loadingLandscape get() = bg("Aegis_Landscape_Boot")
     val menuBg get() = bg("Olympus_Background_asset")
     val mapBg get() = bg("Cloud_Island_Background_asset")
     val arenaBg get() = bg("Celestial_Olympus_Arena_Background_asset")
@@ -71,8 +71,8 @@ object Art {
 
     /** Paths eagerly decoded during the loading screen so the bar tracks real work. */
     val preloadPaths: List<String> = listOf(
-        "bg/Vertical_Loading_Screen.webp",
-        "bg/Horizontal_Loading_Screen.webp",
+        "bg/Aegis_Portrait_Boot.webp",
+        "bg/Aegis_Landscape_Boot.webp",
         "bg/Olympus_Background_asset.webp",
         "bg/Cloud_Island_Background_asset.webp",
         "bg/Celestial_Olympus_Arena_Background_asset.webp",

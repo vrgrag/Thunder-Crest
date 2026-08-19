@@ -29,6 +29,10 @@ local.properties
 keystore.properties
 **/SIGNING_INFO.txt
 
+# QA debug overrides (loaded from assets/ridge.properties in debug builds).
+ridge.properties
+app/google-services.json
+
 # Proguard folder
 proguard/
 

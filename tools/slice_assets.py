@@ -18,8 +18,8 @@ OUT = os.path.join("assets", "sprites")
 
 # Sheets that are photographic backgrounds / full screens: never sliced.
 SKIP = {
-    "Vertical_Loading_Screen",
-    "Horizontal_Loading_Screen",
+    "Aegis_Portrait_Boot",
+    "Aegis_Landscape_Boot",
     "Olympus_Background_asset",
     "Ancient_Temple_Background_asset",
     "Celestial_Olympus_Arena_Background_asset",

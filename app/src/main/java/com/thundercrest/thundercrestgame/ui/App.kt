@@ -11,7 +11,6 @@ import androidx.compose.runtime.setValue
 
 /** All destinations in the app. */
 sealed interface Nav {
-    data object Loading : Nav
     data object Menu : Nav
     data object Map : Nav
     data class Levels(val chapter: Int) : Nav
@@ -23,21 +22,24 @@ sealed interface Nav {
 
 @Composable
 fun App(setPortraitLock: (Boolean) -> Unit) {
-    var stack by remember { mutableStateOf(listOf<Nav>(Nav.Loading)) }
+    // Nav.Loading is intentionally gone — the gray-part splash in
+    // LauncherActivity is now the ONLY user-visible loading UI. Asset
+    // preloading / level generation happens invisibly in MainActivity
+    // before this composable is mounted (see MainActivity.onCreate).
+    var stack by remember { mutableStateOf(listOf<Nav>(Nav.Menu)) }
     val current = stack.last()
 
     fun push(n: Nav) { stack = stack + n }
     fun replace(n: Nav) { stack = stack.dropLast(1) + n }
     fun pop() { if (stack.size > 1) stack = stack.dropLast(1) }
 
-    // Loading screen may rotate; everything else is portrait-only.
-    setPortraitLock(current !is Nav.Loading)
+    // Menu and every other screen are portrait-only.
+    setPortraitLock(true)
 
     BackHandler(enabled = stack.size > 1) { pop() }
 
     Crossfade(targetState = current, animationSpec = tween(350), label = "nav") { screen ->
         when (screen) {
-            Nav.Loading -> LoadingScreen(onDone = { replace(Nav.Menu) })
             Nav.Menu -> MenuScreen(
                 onPlay = { push(Nav.Map) },
                 onSettings = { push(Nav.Settings) },
